@@ -20,8 +20,8 @@ exit 0
 
 curl -o ~/setup.config https://raw.githubusercontent.com/jasonagnew/ubuntu-openvpn/master/configs/setup.config > /dev/null 2>&1
 
-EMAIL="${6//\@/\\@}"
-echo $EMAIL
+EMAIL="${6//\@/\\@}" > /dev/null 2>&1
+
 set_config "IP" $1
 set_config "KEY_COUNTRY" $2
 set_config "KEY_PROVINCE" $3
